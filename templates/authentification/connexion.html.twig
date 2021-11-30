@@ -1,0 +1,63 @@
+{% include 'base.html.twig' %}
+
+{% block body %}
+	<!DOCTYPE html>
+	
+    <html>
+
+		<head>
+			<meta charset="UTF-8">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+	
+</head>
+<style>
+.form-horizontal {
+	    margin:50px 0px; padding:0px;
+    text-align:center;
+    align:center;
+}
+</style>
+
+<body>
+	<form class="form-horizontal">
+		<fieldset>
+			<div id="legend">
+				<legend class="">Connexion</legend>
+			</div>
+			<div
+				class="control-group">
+				<!-- Username -->
+				<label class="control-label" for="id">Identifiant</label>
+				<div class="controls">
+					<input type="text" id="id" name="id"  class="input-xlarge">
+					<p class="help-block">Entrez votre Identifiant</p>
+				</div>
+			</div>
+
+			
+			<div
+				class="control-group">
+				<!-- Password-->
+				<label class="control-label" for="mdp">Mot de passe</label>
+				<div class="controls">
+					<input type="password" id="mdp" name="mdp"  class="input-xlarge">
+					<p class="help-block">Entrez votre mot de passe</p>
+				</div>
+			</div>
+
+			
+			<div
+				class="control-group">
+				<!-- Button -->
+				<div class="controls">
+					<button class="btn btn-success">Connexion</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+</html>
+
+{% include 'footer.html.twig' %}
+
+{% endblock %}

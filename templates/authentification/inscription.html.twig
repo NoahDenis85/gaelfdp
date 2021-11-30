@@ -1,0 +1,133 @@
+{% include 'base.html.twig' %}
+
+{% block body %}
+	<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta charset="UTF-8">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+	</html>
+</head>
+<style>
+	.form-horizontal {
+		margin: 50px 0;
+		padding: 0;
+		text-align: center;
+		align: center;
+	}
+</style>
+
+<body>
+
+<form class="form-horizontal" method="post" name="formulaire_inscription">
+		<fieldset>
+			<div id="legend">
+				<legend class="">Inscription</legend>
+			</div>			
+    {{ form_start(InscriptionForm) }}
+{{ form_row(InscriptionForm.Prenom) }}
+        {{ form_row(InscriptionForm.Nom) }}
+        {{ form_row(InscriptionForm.mail) }}
+        {{ form_row(InscriptionForm.Password) }}
+        {{ form_row(InscriptionForm.agreeTerms) }}
+
+        <button class="btn">Register</button>
+    {{ form_end(InscriptionForm) }}
+
+	<div
+				class="control-group">
+				<!-- Button -->
+				<div class="controls">
+					<button type="submit" class="btn btn-success">Connexion</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+	<form class="form-horizontal" method="post" name="formulaire_inscription">
+		<fieldset>
+			<div id="legend">
+				<legend class="">Inscription</legend>
+			</div>
+			<div
+				class="control-group">
+				<!-- Lastname -->
+				<label class="control-label" for="nom">Nom</label>
+				<div class="controls">
+					<input type="text" id="nom" name="nom" class="input-xlarge">
+					<p class="help-block">Entrez votre nom</p>
+				</div>
+			</div>
+
+			<div
+				class="control-group">
+				<!-- Firstname -->
+				<label class="control-label" for="prenom">Prénom</label>
+				<div class="controls">
+					<input type="text" id="prenom" name="prenom" class="input-xlarge">
+					<p class="help-block">Entrez votre prénom</p>
+				</div>
+			</div>
+
+			<div
+				class="control-group">
+				<!-- Password-->
+				<label class="control-label" for="password">Mot de passe</label>
+				<div class="controls">
+					<input type="password" id="password" name="password" class="input-xlarge">
+					<p class="help-block">Entrez votre mot de passe</p>
+				</div>
+			</div>
+
+			<div
+				class="control-group">
+				<!-- Mail-->
+				<label class="control-label" for="mail">Mail</label>
+				<div class="controls">
+					<input type="text" id="mail" name="mail" class="input-xlarge">
+					<p class="help-block">Entrez votre adresse mail</p>
+				</div>
+			</div>
+
+			<div
+				class="control-group">
+				<!-- Password-->
+				<label class="control-label" for="tel">Numéro de Téléphone</label>
+				<div class="controls">
+					<input type="text" id="tel" name="tel" class="input-xlarge">
+					<p class="help-block">Entrez votre numéro de téléphone</p>
+				</div>
+			</div>
+
+			<div
+				class="control-group">
+				<!-- Date Naissance-->
+				<label class="control-label" for="dateNaiss">Date de Naissance</label>
+				<div class="controls">
+					<input type="date" id="dateNaiss" name="dateNaiss" class="input-xlarge">
+					<p class="help-block">Entrez votre date de naissance</p>
+				</div>
+			</div>
+
+            			<div
+				class="control-group">
+				<!-- Portfolio-->
+				<label class="control-label" for="Portfolio">Portfolio</label>
+				<div class="controls">
+					<input type="text" id="Portfolio" name="Portfolio" class="input-xlarge">
+					<p class="help-block">Entrez votre Portfolio</p>
+				</div>
+			</div>
+
+
+			<div
+				class="control-group">
+				<!-- Button -->
+				<div class="controls">
+					<button type="submit" class="btn btn-success">Connexion</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</body></html>{% include 'footer.html.twig' %}{% endblock %}
